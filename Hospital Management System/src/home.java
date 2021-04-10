@@ -38,93 +38,65 @@ public class home extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        jButton1.setText("Create new patient record");
-        jButton1.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add new patient.png"))); // NOI18N
+        jButton1.setText("Create New Patient Record");
+        jButton1.setPreferredSize(new java.awt.Dimension(240, 59));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 90, 250, -1));
 
         jButton2.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        jButton2.setText("Add diag. info.");
-        jButton2.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add diag.png"))); // NOI18N
+        jButton2.setText("Add Diagnosis Information");
+        jButton2.setPreferredSize(new java.awt.Dimension(240, 59));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 186, 250, -1));
 
         jButton3.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        jButton3.setText("Full history of patient");
-        jButton3.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_history1.png"))); // NOI18N
+        jButton3.setText("Full History Of Patient");
+        jButton3.setPreferredSize(new java.awt.Dimension(240, 59));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 289, 250, -1));
 
         jButton4.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        jButton4.setText("Update patient record");
-        jButton4.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_update_details.png"))); // NOI18N
+        jButton4.setText("Update Patient Record");
+        jButton4.setPreferredSize(new java.awt.Dimension(240, 59));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 388, 250, -1));
 
         jButton5.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        jButton5.setText("Hospital info.");
-        jButton5.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rsz_hospital_information.png"))); // NOI18N
+        jButton5.setText("Hospital Information");
+        jButton5.setPreferredSize(new java.awt.Dimension(240, 59));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 488, 250, -1));
 
         jButton6.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/exit.png"))); // NOI18N
         jButton6.setText("Logout");
-        jButton6.setPreferredSize(new java.awt.Dimension(200, 59));
+        jButton6.setPreferredSize(new java.awt.Dimension(240, 59));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 589, 250, -1));
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
-        jLabel1.setText("Welcome To Home Page !");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(81, 81, 81)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(77, 77, 77)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(383, 383, 383))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(237, 237, 237)
-                .addComponent(jLabel1)
-                .addGap(90, 90, 90)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(104, 104, 104)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(163, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        int a = JOptionPane.showConfirmDialog(null, "Do you really want to Log-out?","Select", JOptionPane.YES_NO_OPTION);
-        if ( a == 0 )
+        int a = JOptionPane.showConfirmDialog(null, "Do you really want to log-out?", "Select", JOptionPane.YES_NO_OPTION);
+        if( a == 0 )
         {
             setVisible(false);
             new login().setVisible(true);
@@ -132,7 +104,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here
+        // TODO add your handling code here:
         new addNewPatientRecord().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

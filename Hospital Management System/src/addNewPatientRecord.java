@@ -1,3 +1,6 @@
+import Project.ConnectionProvider;
+import java.sql.*;
+import javax.swing.JOptionPane;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -125,6 +128,11 @@ public class addNewPatientRecord extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/save-icon--1.png"))); // NOI18N
         jButton2.setText("Save");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 445, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add new patient background.jpg"))); // NOI18N
@@ -142,6 +150,28 @@ public class addNewPatientRecord extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String patientID = jTextField1.getText();
+        String name = jTextField2.getText();
+        String contactNumber = jTextField3.getText();
+        String gender = (String)jComboBox1.getSelectedItem();
+        String age = jTextField4.getText();
+        String bloodGroup = jTextField5.getText();
+        String address = jTextField6.getText();
+        String anyMajorDisease = jTextField7.getText();
+        try{
+            Connection con = ConnectionProvider.getCon();
+            Statement st = con.createStatement();
+            st.executeUpdate("insert into patient values('"+patientID+"','"+name+"','"+contactNumber+"','"+age+"','"+gender+"','"+bloodGroup+"','"+address+"','"+anyMajorDisease+"')");
+            JOptionPane.showMessageDialog(null, "Succesfully Updated");
+            setVisible(false);
+            new addNewPatientRecord().setVisible(true);
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Please enter data in correct format !");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

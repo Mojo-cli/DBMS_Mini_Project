@@ -169,7 +169,7 @@ public class addNewPatientRecord extends javax.swing.JFrame {
             setVisible(false);
             new addNewPatientRecord().setVisible(true);
         } catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Please enter data in correct format !");
+            System.out.println(e);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

@@ -165,7 +165,7 @@ public class addNewPatientRecord extends javax.swing.JFrame {
             Connection con = ConnectionProvider.getCon();
             Statement st = con.createStatement();
             st.executeUpdate("insert into patient values('"+patientID+"','"+name+"','"+contactNumber+"','"+age+"','"+gender+"','"+bloodGroup+"','"+address+"','"+anyMajorDisease+"')");
-            JOptionPane.showMessageDialog(null, "Succesfully Updated");
+            JOptionPane.showMessageDialog(null, "Data Succesfully Saved");
             setVisible(false);
             new addNewPatientRecord().setVisible(true);
         } catch(Exception e){

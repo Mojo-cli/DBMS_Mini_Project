@@ -49,6 +49,7 @@ public class updatePatientRecord extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
 
         jLabel9.setText("jLabel9");
@@ -143,9 +144,17 @@ public class updatePatientRecord extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(661, 454, -1, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("/home/mojo/Desktop/DBMS_Mini_Project/Hospital Management System/HMS ICON/add new patient background.jpg")); // NOI18N
-        jLabel10.setText("jLabel10");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, -1));
+        jButton4.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        jButton4.setText("Delete From Record");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon("/home/mojo/Desktop/DBMS_Mini_Project/Hospital Management System/src/add new patient background.jpg")); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -201,6 +210,21 @@ public class updatePatientRecord extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        String patientID = jTextField1.getText();
+        try{
+            Connection con = ConnectionProvider.getCon();
+            Statement st = con.createStatement();
+            st.executeUpdate("delete from patient where patientID='"+patientID+"'");
+            JOptionPane.showMessageDialog(null, "Record Deleted Successfully!");
+            setVisible(false);
+            new updatePatientRecord().setVisible(true);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -240,6 +264,7 @@ public class updatePatientRecord extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

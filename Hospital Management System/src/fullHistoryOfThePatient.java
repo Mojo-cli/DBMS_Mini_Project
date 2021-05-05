@@ -72,7 +72,7 @@ public class fullHistoryOfThePatient extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon("/home/mojo/Desktop/DBMS_Mini_Project/Hospital Management System/src/add new patient background.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 510));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 780, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

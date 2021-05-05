@@ -217,6 +217,7 @@ public class updatePatientRecord extends javax.swing.JFrame {
             Connection con = ConnectionProvider.getCon();
             Statement st = con.createStatement();
             st.executeUpdate("delete from patient where patientID='"+patientID+"'");
+            st.executeUpdate("delete from patientreport where patientID='"+patientID+"'");
             JOptionPane.showMessageDialog(null, "Record Deleted Successfully!");
             setVisible(false);
             new updatePatientRecord().setVisible(true);
